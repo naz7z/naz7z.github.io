@@ -1,0 +1,50 @@
+
+#top {
+	height: 700px;
+}
+
+#about {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	color: #ffffff;
+}
+
+#about img {
+	display: inline-block;
+	width: 200px;
+}
+
+#about h1 {
+	display: inline-block;
+	font-size: 70px;
+	font-family: 'Rajdhani', sans-serif;
+	margin-top: 100px;
+}
+
+#about h2 {
+	display: inline-block;
+	font-size: 15px;
+	font-family: 'Rajdhani', sans-serif;
+	margin-top: 20px;
+}
+
+@media(max-width: 768px){
+
+	#about img {
+		width: 70%;
+	}
+
+	#about h1 {
+		font-size: 40px;
+		margin-top: 40px;
+	}
+
+	#about h2 {
+		font-size: 18px;
+		margin-top: 30px;
+		text-align: left;
+		margin: 20px;
+	}
+
+}
