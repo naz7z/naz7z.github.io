@@ -31,6 +31,14 @@
 
 @media(max-width: 768px){
 
+	#top {
+		height: 900px;
+	}
+
+	#about {
+		height: auto;
+	}
+
 	#about img {
 		width: 70%;
 	}
