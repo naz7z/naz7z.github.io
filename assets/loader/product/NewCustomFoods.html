@@ -1,0 +1,91 @@
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="../../css/modal_pro.css">
+
+<body>
+	<div id="title">
+		<h1>New Custom Foods</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+
+	<h2>ダウンロード</h2>
+	<a href="http://bit.ly/natriumDl" target="_blank" class="download">
+		こちらをクリックしてダウンロードページに転移します。<br />
+		プライバシーポリシーをお守りいただける方のみこの先に進んでください。
+	</a>
+	<br />
+	<a href="../policy.html" class="switchModal">プライバシーポリシー</a>
+
+	<h2>概要</h2>
+	<p>
+		Spigot 1.8 ~ 1.12 向けのプラグインです。<br />
+		独自の食料システムを追加します。<br />
+		体力値回復量・食料値回復量・クールダウン・サウンド・パーティクル・ポーション効果・コマンド実行・食料無限化を各食糧ごとに設定できます。<br />
+	</p>
+
+	<h2>コマンド</h2>
+	
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/cf create [ID]</td>
+				<td>食料を作成します。</td>
+			</tr>
+			<tr>
+				<td>/cf edit [ID]</td>
+				<td>IDの食糧を編集します。</td>
+			</tr>
+			<tr>
+				<td>/cf give [ID] [amount] [player]</td>
+				<td>対象プレイヤーにIDの食料を対象数与えます。</td>
+			</tr>
+			<tr>
+				<td>/cf list</td>
+				<td>コンフィグに記載されている食料を一覧表示します。</td>
+			</tr>
+			<tr>
+				<td>/cf save</td>
+				<td>現在の食糧設定をコンフィグに保存します。</td>
+			</tr>
+			<tr>
+				<td>/cf reload</td>
+				<td>コンフィグをリロードします。</td>
+			</tr>
+			<tr>
+				<td>/cf help</td>
+				<td>ヘルプを表示します。</td>
+			</tr>
+			
+		</table>
+	</div>
+
+	<h2>パーミッション</h2>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>パーミッション</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>CustomFoods.op</td>
+				<td>コマンドを実行できます。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>コンフィグ</h2>
+	<p>
+		特にありません。
+	</p>
+
+	<h2>GUIでの編集方法</h2>
+	<div class="scroll">
+		<img src="../../image/other/cf_gui_info.png" />
+	</div>
+</body>

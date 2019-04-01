@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Na: trium works</title>
-	<meta charset="utf-8">
-	<meta name="description" content="「Na:trium Works」のページです。 Spigotプラグインの配布などを行っています。">
-	<meta name="author" content="Nazuna">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="UTF-8">
+	<meta author="Nazuna">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="robots" content="ALL">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+	<title>Na:trium の道具箱</title>
+	<meta name="description" content="Javaで作ったものを配布しています。">
+	<meta name="keywords" content="ナトリウム Natrium Spigot プラグイン Minecraft Nazuna" />
+	<meta name="format-detection" content="telephone=no,address=no,email=no">
+	<meta property="og:title" content="Na:triumの道具箱">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://naz7z.github.io/">
+	<meta property="og:image" content="https://naz7z.github.io/assets/image/pr.jpg">
+	<meta property="og:site_name" content="Na:trium の道具箱">
+	<meta property="og:description" content="便利なSpigotプラグインや、Javaで作ったものを配布しています。">
+	<meta property="og:locale" content="ja_JP">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://naz7z.github.io/assets/image/pr.jpg">
+	<meta property="og:image:secure_url" content="https://naz7z.github.io/assets/image/pr.jpg" />
+	<meta property="og:image:alt" content="便利なSpigotプラグインや、Javaで作ったものを配布しています。" />
+	<meta name="theme-color" content="#42F4AA" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<link rel="icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon-114.png">
+	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123405637-3"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-
 		gtag('config', 'UA-123405637-3');
 	</script>
+
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({
@@ -22,88 +43,74 @@
 			enable_page_level_ads: true
 		});
 	</script>
-	<link rel="icon" href="./contents/img/favicon.ico">
-	<link rel="apple-touch-icon" href="./contents/img/apple-touch-icon-152x152.png" sizes="152x152">
-	<link rel="icon" href="./contents/img/icon-196x196.png" sizes="192x192" type="image/png">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/modal.css">
 </head>
 <body>
 	<header>
-		<div id="header-logo">
-			<!-- <a href="index.html"> -->
-				<a href="index.html"><img src="./contents/img/natrium_logo.png"></a>
-			<!-- </a> -->
-		</div>
-		<div id="header-navi">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="download.html">Download</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</div>
-	</header>
-
-	<div id="top">
-		<div id="top-h">
-			<h1 id="top-h1">Na: trium</h1>
-			<h2 id="top-h2">works</h2>
-		</div>
-		<svg class="arrows">
-			<path class="a1" d="M0 0 L30 32 L60 0"></path>
-			<path class="a2" d="M0 20 L30 52 L60 20"></path>
-			<path class="a3" d="M0 40 L30 72 L60 40"></path>
-		</svg>
-	</div>
-
-	<div id="news">
-		<h1>== NEWS ==</h1>
-		<br />
-		<a href="download.html">
-			<div class="news-parts">
-				<div class="news-parts-picture">
-					<img src="./contents/img/news.png">
+		<div class="header-contents">
+			<div id="header-logo">
+				<!-- <a href="index.html"> -->
+					<a href="/"><img src="./assets/image/header.png"></a>
+					<!-- </a> -->
 				</div>
-				<h2>AdvanceGuiPrefix v3.0.0 release!</h2>
+				<div id="header-navi">
+					<a href="/"><img src="./assets/image/home.svg" alt="Home" /></a>
+					<a href="./assets/loader/contact.html" class="switchModal"><img src="./assets/image/mail.svg" alt="Contact" /></a>
+					<a href="./assets/loader/policy.html" class="switchModal"><img src="./assets/image/info.svg" alt="Policy" /></a>
+				</div>
 			</div>
-		</a>
-	</div>
+		</header>
 
-	<footer>
-		<div id="footer-logo">
-			<a href="index.html"><img src="./contents/img/natrium_logo.png"></a>
+		<div id="top">
+			<div id="top-h">
+				<img src="./assets/image/title.png" onselectstart="return false;" onmousedown="return false;" />
+			</div>
+			<svg class="arrows">
+				<path class="a1" d="M0 0 L30 32 L60 0"></path>
+				<path class="a2" d="M0 20 L30 52 L60 20"></path>
+				<path class="a3" d="M0 40 L30 72 L60 40"></path>
+			</svg>
 		</div>
-		<br />
-		<div id="footer-social">
-			<a href="https://twitter.com/naz_7z" target="_blank" title="Twitter"><img src="./contents/img/footer1.svg"></a>
-			<a href="https://www.nicovideo.jp/user/63999146" target="_blank" title="Niconico"><img src="./contents/img/footer2.svg"></a>
-			<a href="https://discord.gg/5CmwDwY" target="_blank" title="Discord"><img src="./contents/img/footer3.svg"></a>
-			<a href="http://nazunap.net" target="_blank" title="Blog"><img src="./contents/img/footer4.svg"></a>
-		</div>
-		<br />
-		<div id="footer-copyrights">
-			<p>Copyright <a href="https://twitter.com/naz_7z" target="_blank">©Nazuna</a> All Rights Reserved.</p>
-		</div>
-	</footer>
 
-	<div class="cp_fullscreenmenu">
-		<input class="toggle" type="checkbox" />
-		<div class="hamburger"><span></span></div>
-		<div class="menu">
-			<div>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="download.html">Download</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+		<div id="prod"></div>
+
+		<footer>
+			<div id="footer-logo">
+				<a href="index.html"><img src="./assets/image/header.png"></a>
+			</div>
+			<br />
+			<div id="footer-copyrights">
+				<p>Copyright <a href="https://twitter.com/naz_7z" target="_blank">©Nazuna</a> All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<div class="cp_fullscreenmenu">
+			<input class="toggle" type="checkbox" />
+			<div class="hamburger"><span></span></div>
+			<div class="menu">
+				<div>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="./assets/loader/contact.html" class="switchModal">Contact</a></li>
+						<li><a href="./assets/loader/policy.html" class="switchModal">Policy</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
 
-</body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<script type="text/javascript">
+			$(function(){
+				$("#prod").load("./assets/loader/products.html");
+			});
+		</script>
+
+	</body>
 </html>

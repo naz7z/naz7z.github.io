@@ -1,0 +1,126 @@
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="../../css/modal_pro.css">
+
+<body>
+	<div id="title">
+		<h1>Advance Gui Prefix</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+
+	<h2>ダウンロード</h2>
+	<a href="http://bit.ly/natriumDl" target="_blank" class="download">
+		こちらをクリックしてダウンロードページに転移します。<br />
+		プライバシーポリシーをお守りいただける方のみこの先に進んでください。
+	</a>
+	<br />
+	<a href="../policy.html" class="switchModal">プライバシーポリシー</a>
+
+	<h2>概要</h2>
+	<p>
+		Spigot 1.8 ~ 1.13 向けのプラグインです。<br />
+		GUI仕様の完全カスタマイズ可能プレフィックスシステムを追加します。<br />
+		Configファイルの設定方法は以下に記述してあります。<br />
+		GUI上のアイテムアイコンを自由に設定でき、凝ったデザインを作ることもできます。<br />
+	</p>
+
+	<h2>コマンド</h2>
+	<p>プレフィックスGUI表示コマンド</p>
+	
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/prefix</td>
+				<td>自身のプレフィックスの設定画面を開きます。</td>
+			</tr>
+			<tr>
+				<td>/prefix [player]</td>
+				<td>指定プレイヤーのプレフィックスの設定画面を開きます。</td>
+			</tr>
+			<tr>
+				<td>/prefix [player] [player]</td>
+				<td>指定プレイヤーに指定プレイヤーのプレフィックスの設定画面を表示します。</td>
+			</tr>
+		</table>
+	</div>
+
+	<p>プレフィックス管理系コマンド</p>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/adminprefix set [player] [prefix]</td>
+				<td>プレイヤーのプレフィックスを指定文字列に変更します。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix reset [player]</td>
+				<td>指定プレイヤーのプレフィックスをリセットします。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix give [player] [prefixID]</td>
+				<td>指定プレイヤーに指定IDのプレフィックスの使用権限を付与します。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix take [player] [prefixID]</td>
+				<td>指定プレイヤーの指定IDのプレフィックスの使用権限を剥奪します。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix list</td>
+				<td>プレフィックスの一覧を表示します。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix reload</td>
+				<td>プレフィックス設定のコンフィグをリロードします。</td>
+			</tr>
+			<tr>
+				<td>/adminprefix help</td>
+				<td>コマンドヘルプを表示します。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>パーミッション</h2>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>パーミッション</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>AdvanceGuiPrefix.ShowMyselfPlayer</td>
+				<td>自分自身のプレフィックスを表示・編集できます。</td>
+			</tr>
+			<tr>
+				<td>AdvanceGuiPrefix.ShowOtherPlayer</td>
+				<td>指定プレイヤーのプレフィックスを表示できます。</td>
+			</tr>
+			<tr>
+				<td>AdvanceGuiPrefix.changeOtherPlayer</td>
+				<td>指定プレイヤーのプレフィックスを編集できます。</td>
+			</tr>
+			<tr>
+				<td>AdvanceGuiPrefix.runAdminCommand</td>
+				<td>プレフィックス管理系コマンドの実行を許可します。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>コンフィグ</h2>
+	<div class="scroll">
+		<script src="https://gist.github.com/naz7z/719a1cb09b26d7314a675b574c64655d.js"></script>
+	</div>
+	<p>スロット番号</p>
+	<div class="scroll">
+		<img src="../../image/other/slot-example.png" />
+	</div>
+
+</body>

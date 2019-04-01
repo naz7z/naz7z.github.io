@@ -1,0 +1,115 @@
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="../../css/modal_pro.css">
+
+<body>
+	<div id="title">
+		<h1>Black List Items</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+
+	<h2>ダウンロード</h2>
+	<a href="http://bit.ly/natriumDl" target="_blank" class="download">
+		こちらをクリックしてダウンロードページに転移します。<br />
+		プライバシーポリシーをお守りいただける方のみこの先に進んでください。
+	</a>
+	<br />
+	<a href="../policy.html" class="switchModal">プライバシーポリシー</a>
+
+	<h2>概要</h2>
+	<p>
+		Spigot 1.8 ~ 1.12 向けのプラグインです。<br />
+		TNTやマグマバケツなどの危険アイテムを使用不可に設定することができます。<br />
+		Configファイルの設定方法は以下に記述してあります。<br />
+		必要であればポーション・雪玉などの発射物も禁止することができます。<br />
+	</p>
+
+	<h2>コマンド</h2>
+	
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/blacklistitems help</td>
+				<td>ヘルプを表示します。</td>
+			</tr>
+			<tr>
+				<td>/blacklistitems list</td>
+				<td>現在の禁止アイテム設定状況を確認します。</td>
+			</tr>
+			<tr>
+				<td>/blacklistitems reload</td>
+				<td>コンフィグをリロードします。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>パーミッション</h2>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>パーミッション</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.TNT</td>
+				<td>TNTの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Lava</td>
+				<td>マグマバケツの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Water</td>
+				<td>水バケツの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Egg</td>
+				<td>卵の禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.SnowBall</td>
+				<td>雪玉の禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.TNTCart</td>
+				<td>TNT付きトロッコの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Enderpearl</td>
+				<td>エンダーパールの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Endereye</td>
+				<td>エンダーアイの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Splashpotion</td>
+				<td>スプラッシュポーションの禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.ItemFrame</td>
+				<td>額縁の禁止設定を無視できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Command</td>
+				<td>コマンドを実行できます。</td>
+			</tr>
+			<tr>
+				<td>BlackListItems.accept.Command.Reload</td>
+				<td>リロードコマンドを実行できます。</td>
+			</tr>
+			
+		</table>
+	</div>
+
+	<h2>コンフィグ</h2>
+	<div class="scroll">
+		<script src="https://gist.github.com/naz7z/9ace081407b972f097d4024fe2f2bb80.js"></script>
+	</div>
+</body>

@@ -1,0 +1,109 @@
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="../../css/modal_pro.css">
+
+<body>
+	<div id="title">
+		<h1>Tag Games</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+
+	<h2>ダウンロード</h2>
+	<a href="http://bit.ly/natriumDl" target="_blank" class="download">
+		こちらをクリックしてダウンロードページに転移します。<br />
+		プライバシーポリシーをお守りいただける方のみこの先に進んでください。
+	</a>
+	<br />
+	<a href="../policy.html" class="switchModal">プライバシーポリシー</a>
+
+	<h2>概要</h2>
+	<p>
+		Spigot 1.8 ~ 1.12 向けのプラグインです。<br />
+		4種類のルールの鬼ごっこを追加します。<br />
+		鬼のランダム指定・終了時間設定などができます。<br />
+	</p>
+
+	<h2>コマンド</h2>
+	
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/tag mode [change/infection/ice/height]</td>
+				<td>ゲームの種類設定を行います。</td>
+			</tr>
+			<tr>
+				<td>/tag time [second]</td>
+				<td>ゲーム時間を設定します。</td>
+			</tr>
+			<tr>
+				<td>/tag start</td>
+				<td>ゲームを開始します。</td>
+			</tr>
+			<tr>
+				<td>/tag stop</td>
+				<td>ゲームを強制停止します。</td>
+			</tr>
+			<tr>
+				<td>/tag join</td>
+				<td>自身をゲームに参加させます。</td>
+			</tr>
+			<tr>
+				<td>/tag join [player/*]</td>
+				<td>指定プレイヤーをゲームに参加させます。</td>
+			</tr>
+			<tr>
+				<td>/tag leave</td>
+				<td>自身をゲームから離脱させます。</td>
+			</tr>
+			<tr>
+				<td>/tag leave [player/*]</td>
+				<td>指定プレイヤーをゲームから離脱させます。</td>
+			</tr>
+			<tr>
+				<td>/tag tag add</td>
+				<td>ランダムで鬼を一人設定します。</td>
+			</tr>
+			<tr>
+				<td>/tag tag add [player]</td>
+				<td>指定プレイヤーを鬼に設定します。</td>
+			</tr>
+			<tr>
+				<td>/tag tag remove</td>
+				<td>ランダムで鬼から一人除外します。</td>
+			</tr>
+			<tr>
+				<td>/tag tag remove [player]</td>
+				<td>指定プレイヤーを鬼から除外します。</td>
+			</tr>
+			<tr>
+				<td>/tag list</td>
+				<td>ゲーム参加者を一覧表示します。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>パーミッション</h2>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>パーミッション</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>TagGames.op</td>
+				<td>ゲーム管理系コマンドを実行できます。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>コンフィグ</h2>
+	<p>
+		特にありません。
+	</p>
+</body>

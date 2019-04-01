@@ -1,0 +1,158 @@
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+	background: #ffffff;
+	/*border-left: solid 1px #ececec;*/
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+	background-color: #666666;
+	border-radius: 10px;
+	/*box-shadow: inset 0 0 0 2px #fff;*/
+}
+
+body {
+	display: block;
+	width: 99%;
+	height: auto;
+	font-family: 'Noto Sans JP';
+	overflow-y: auto;
+	overflow-x: hidden;
+	word-break: break-all;
+}
+
+#title {
+	width: 100%;
+	text-align: center;
+}
+
+#title h1 {
+	font-family: 'Chakra Petch';
+	font-size: 50px;
+	position: relative;
+	display: inline-block;
+	margin: 0px;
+	margin-bottom: 1em;
+}
+#title h1:before {
+	content: '';
+	position: absolute;
+	bottom: -15px;
+	display: inline-block;
+	width: 60px;
+	height: 5px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #4286f4;
+	border-radius: 2px;
+}
+
+img {
+	height: 300px;
+}
+
+#title img {
+	width: 20px;
+	height: auto;
+	right: 0;
+	margin: auto auto;
+	margin-left: 10px;
+}
+
+h2 {
+	border-bottom: solid 3px #cce4ff;
+	position: relative;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+h2:after {
+	position: absolute;
+	content: " ";
+	display: block;
+	border-bottom: solid 3px #5472cd;
+	bottom: -3px;
+	width: 20%;
+}
+
+p {
+	font-size: 16px;
+}
+
+.table-content table,
+.scroll table {
+	white-space: nowrap;
+	border-collapse: collapse;
+}
+
+.table-content table th,
+.table-content table td {
+	border: solid 1px #111111;
+	padding: 5px;
+}
+
+.table-content, .scroll {
+	overflow-x: scroll;
+}
+
+.table-content::-webkit-scrollbar,
+.scroll::-webkit-scrollbar {
+	height: 5px;
+}
+.table-content::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background: #eee;
+}
+.table-content::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background: #666;
+}
+
+.download {
+	display: inline-block;
+	padding: 0.5em 4em;
+	text-decoration: none;
+	background: #eeeeee;
+	border-left: solid 24px #4286f4;
+	color: #333333;
+	font-weight: bold;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+.download:active {
+	box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+	transform: translateY(2px);
+}
+
+@media screen and (max-width: 767px) {
+
+	body {
+		word-break: break-all;
+	}
+
+	#title {
+		font-size: 10px;
+	}
+
+	h2 {
+		font-size: 17.5px;
+	}
+
+	p {
+		font-size: 15px;
+	}
+
+	hr {
+		height: 5px;
+	}
+
+}

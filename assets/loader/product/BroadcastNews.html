@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<link rel="stylesheet" href="../../css/modal_pro.css">
+
+<body>
+	<div id="title">
+		<h1>Broadcast News</h1>
+		<a href="#" onClick="window.open(location.href, '_blank');"><img src="../../image/open.svg" /></a>
+	</div>
+
+	<h2>ダウンロード</h2>
+	<a href="http://bit.ly/natriumDl" target="_blank" class="download">
+		こちらをクリックしてダウンロードページに転移します。<br />
+		プライバシーポリシーをお守りいただける方のみこの先に進んでください。
+	</a>
+	<br />
+	<a href="../policy.html" class="switchModal">プライバシーポリシー</a>
+
+	<h2>概要</h2>
+	<p>
+		Spigot 1.8 ~ 1.13 向けのプラグインです。<br />
+		毎時 0分に指定したRSSからニュースを取得して、サーバー内に流すプラグインです。<br />
+		コンフィグより、RSSを自由に変更可能です。<br />
+		うまく利用すれば、サーバーのアップデート情報なども流せます<br />
+	</p>
+
+	<h2>コマンド</h2>
+	
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>コマンド</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>/news</td>
+				<td>現在のニュースを取得して表示します。</td>
+			</tr>
+			<tr>
+				<td>/news reload</td>
+				<td>コンフィグをリロードします。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>パーミッション</h2>
+	<div class="table-content">
+		<table border="1">
+			<tr>
+				<th>パーミッション</th>
+				<th>説明</th>
+			</tr>
+			<tr>
+				<td>broadcastNews.reload</td>
+				<td>リロードコマンドを実行できます。</td>
+			</tr>
+		</table>
+	</div>
+
+	<h2>コンフィグ</h2>
+	<div class="scroll">
+		<script src="https://gist.github.com/naz7z/e56d1798bfabecfa601f336cea46f389.js"></script>
+	</div>
+</body>
