@@ -3,7 +3,6 @@ var content = document.getElementById('content');
 
 var speech = new webkitSpeechRecognition();
 var isRun = false;
-var isEnable = false;
 
 (function() {
 
@@ -16,39 +15,29 @@ var isEnable = false;
 		video: false
 	}).then(_handleSuccess).catch(_handleError);
 
-	function _handleSuccess(stream) {
+	function _handleSuccess() {
 		btn.addEventListener("click", () => {
-			_handleClick(stream);
+			if (isRun) {
+				speech.stop();
+				return;
+			}
+
+			isRun = true;
+			speech.start();
+			document.getElementById('on_se').play();
+			document.getElementById("switch").src = "./contents/on.png";
+
 		}, false);
 	}
 
 	function _handleError() {
-		alert("Error!");
+		alert("マイク入力を許可して下さい!");
 	}
 
-	function _handleClick(stream) {
-		isEnable = true;
-	}
 })();
 
 
-btn.addEventListener( 'click' , function() {
-	if (!(isEnable)) return;
-
-	if (isRun) {
-		speech.stop();
-		return;
-	}
-
-	isRun = true;
-	speech.start();
-	document.getElementById('on_se').play();
-	document.getElementById("switch").src = "./contents/on.png";
-});
-
 speech.addEventListener( 'result' , function( e ) {
-	if (!(isEnable)) return;
-	
 	var text = e.results[0][0].transcript;
 	document.getElementById('off_se').play();
 	document.getElementById("switch").src = "./contents/off.png";
