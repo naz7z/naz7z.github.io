@@ -1,0 +1,75 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	overflow-y: hidden;
+}
+
+/*スクロールバー全体*/
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/*スクロールバーの軌道*/
+::-webkit-scrollbar-track {
+	background: #cccccc;
+	/*border-left: solid 1px #ececec;*/
+}
+
+/*スクロールバーの動く部分*/
+::-webkit-scrollbar-thumb {
+	background-color: #333333;
+	border-radius: 10px;
+	/*box-shadow: inset 0 0 0 2px #fff;*/
+}
+
+#content {
+	width: 100%;
+	height: 90%;
+	background-color: #ffffff;
+
+	color: #111111;
+	font-size: 70px;
+
+	overflow-y: scroll;
+}
+
+#footer {
+	width: 100%;
+	height: 10%;
+	border-top: solid 2px #333333;
+	background-color: #333333;
+	text-align: center;
+}
+
+#footer button {
+	height: 100%;
+}
+
+#footer img {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: bottom;
+}
+
+.button_design {
+	text-decoration: none;
+	background-color: #333333;
+	border: none;
+}
+
+@media (max-width: 767px) {
+
+	#content {
+		font-size: 30px;
+		height: 80%;
+	}
+
+	#footer {
+		height: 20%;
+	}
+
+}
