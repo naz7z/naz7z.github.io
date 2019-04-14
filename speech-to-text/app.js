@@ -4,38 +4,65 @@ var content = document.getElementById('content');
 var speech = new webkitSpeechRecognition();
 var isRun = false;
 
-window.onload = function() {
+// window.onload = function() {
 
-	"use strict";
+// 	"use strict";
 
-	speech.lang = "ja";
+// 	speech.lang = "ja";
 
+// 	navigator.mediaDevices.getUserMedia({
+// 		audio: true,
+// 		video: false
+// 	}).then(_handleSuccess).catch(_handleError);
+
+// 	function _handleSuccess() {
+// 		btn.addEventListener("click", () => {
+// 			if (isRun) {
+// 				speech.stop();
+// 				return;
+// 			}
+
+// 			isRun = true;
+// 			speech.start();
+// 			document.getElementById('on_se').play();
+// 			document.getElementById("switch").src = "./contents/on.png";
+
+// 		}, false);
+// 	}
+
+// 	function _handleError() {
+// 		alert("マイク入力を許可して下さい!");
+// 	}
+
+// };
+
+btn.addEventListener("click", () => {
 	navigator.mediaDevices.getUserMedia({
 		audio: true,
 		video: false
 	}).then(_handleSuccess).catch(_handleError);
+});
 
-	function _handleSuccess() {
-		btn.addEventListener("click", () => {
-			if (isRun) {
-				speech.stop();
-				return;
-			}
+function _handleSuccess() {
+	btn.addEventListener("click", () => {
+		if (isRun) {
+			speech.stop();
+			return;
+		}
 
-			isRun = true;
-			speech.start();
-			document.getElementById('on_se').play();
-			document.getElementById("switch").src = "./contents/on.png";
+		isRun = true;
+		speech.start();
+		document.getElementById('on_se').play();
+		document.getElementById("switch").src = "./contents/on.png";
 
-		}, false);
-	}
+	}, false);
+}
 
-	function _handleError() {
-		alert("マイク入力を許可して下さい!");
-	}
+function _handleError() {
+	alert("マイク入力を許可して下さい!");
+}
 
-};
-
+	
 
 speech.addEventListener( 'result' , function( e ) {
 	var text = e.results[0][0].transcript;
