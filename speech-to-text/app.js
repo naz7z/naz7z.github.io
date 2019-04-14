@@ -4,7 +4,7 @@ var content = document.getElementById('content');
 var speech = new webkitSpeechRecognition();
 var isRun = false;
 
-(function() {
+window.onload = function() {
 
 	"use strict";
 
@@ -34,7 +34,7 @@ var isRun = false;
 		alert("マイク入力を許可して下さい!");
 	}
 
-})();
+};
 
 
 speech.addEventListener( 'result' , function( e ) {
