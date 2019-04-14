@@ -2,6 +2,10 @@
 
     "use strict";
 
+    navigator.mediaDevices.getUserMedia({ video: false, audio: true }).then( stream => {}).catch(err => {
+      alert("マイク入力を許可して下さい!");
+    });
+
     var recognition = new webkitSpeechRecognition(),
         msg         = doc.getElementById("msg");
 
