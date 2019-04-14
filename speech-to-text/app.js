@@ -1,21 +1,3 @@
-(function() {
-
-	navigator.getUserMedia({
-		audio: true
-	}, _handleSuccess, _handleError);
-
-	function _handleSuccess(evt) {
-		btn.addEventListener("click", () => {
-			_handleClick(this, document);
-		}, false);
-	}
-
-	function _handleError() {
-		alert("Error!");
-	}
-
-});
-
 var btn = document.getElementById('btn');
 var content = document.getElementById('content');
 
@@ -26,22 +8,40 @@ var isRun = false;
 //言語を日本語に設定
 speech.lang = "ja";
 
-btn.addEventListener( 'click' , function() {
-	if (isRun) {
-		speech.stop();
-		return;
+
+(function() {
+
+	"use strict";
+
+	const btn = document.getElementById("btn");
+
+	navigator.mediaDevices.getUserMedia({
+		audio: true,
+		video: false
+	}).then(_handleSuccess).catch(_handleError);
+
+	function _handleSuccess(stream) {
+		btn.addEventListener( 'click' , function() {
+			if (isRun) {
+				speech.stop();
+				return;
+			}
+
+			isRun = true;
+			speech.start();
+			document.getElementById('on_se').play();
+			document.getElementById("switch").src = "./contents/on.png";
+		});
 	}
 
-	isRun = true;
-	speech.start();
-	document.getElementById('on_se').play();
-	document.getElementById("switch").src = "./contents/on.png";
+	function _handleError() {
+		alert("マイク入力を許可して下さい!");
+	}
 
-});
+})();
 
 speech.addEventListener( 'result' , function( e ) {
 
-	console.log( e );
 	var text = e.results[0][0].transcript;
 	document.getElementById('off_se').play();
 	document.getElementById("switch").src = "./contents/off.png";
