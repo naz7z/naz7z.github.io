@@ -1,19 +1,15 @@
 var btn = document.getElementById('btn');
 var content = document.getElementById('content');
 
-//音声認識APIの使用
 var speech = new webkitSpeechRecognition();
 var isRun = false;
-
-//言語を日本語に設定
-speech.lang = "ja";
-
+var isEnable = false;
 
 (function() {
 
 	"use strict";
 
-	const btn = document.getElementById("btn");
+	speech.lang = "ja";
 
 	navigator.mediaDevices.getUserMedia({
 		audio: true,
@@ -21,27 +17,38 @@ speech.lang = "ja";
 	}).then(_handleSuccess).catch(_handleError);
 
 	function _handleSuccess(stream) {
-		btn.addEventListener( 'click' , function() {
-			if (isRun) {
-				speech.stop();
-				return;
-			}
-
-			isRun = true;
-			speech.start();
-			document.getElementById('on_se').play();
-			document.getElementById("switch").src = "./contents/on.png";
-		});
+		btn.addEventListener("click", () => {
+			_handleClick(stream);
+		}, false);
 	}
 
 	function _handleError() {
-		alert("マイク入力を許可して下さい!");
+		alert("Error!");
 	}
 
+	function _handleClick(stream) {
+		isEnable = true;
+	}
 })();
 
-speech.addEventListener( 'result' , function( e ) {
 
+btn.addEventListener( 'click' , function() {
+	if (!(isEnable)) return;
+
+	if (isRun) {
+		speech.stop();
+		return;
+	}
+
+	isRun = true;
+	speech.start();
+	document.getElementById('on_se').play();
+	document.getElementById("switch").src = "./contents/on.png";
+});
+
+speech.addEventListener( 'result' , function( e ) {
+	if (!(isEnable)) return;
+	
 	var text = e.results[0][0].transcript;
 	document.getElementById('off_se').play();
 	document.getElementById("switch").src = "./contents/off.png";
@@ -56,6 +63,8 @@ speech.addEventListener( 'result' , function( e ) {
 });
 
 speech.addEventListener("end", function() {
+	if (!(isEnable)) return;
+	
 	document.getElementById('off_se').play();
 	document.getElementById("switch").src = "./contents/off.png";
 	isRun = false;
