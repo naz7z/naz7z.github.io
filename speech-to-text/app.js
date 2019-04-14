@@ -1,3 +1,21 @@
+(function() {
+
+	navigator.getUserMedia({
+		audio: true
+	}, _handleSuccess, _handleError);
+
+	function _handleSuccess(evt) {
+		btn.addEventListener("click", () => {
+			_handleClick(this, document);
+		}, false);
+	}
+
+	function _handleError() {
+		alert("Error!");
+	}
+
+});
+
 var btn = document.getElementById('btn');
 var content = document.getElementById('content');
 
